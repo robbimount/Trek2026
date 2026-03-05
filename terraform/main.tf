@@ -177,3 +177,11 @@ resource "aws_s3_object" "status_404_html" {
   content_type = "text/html; charset=utf-8"
   etag         = filemd5("${path.module}/../404.html")
 }
+
+resource "aws_s3_object" "site_webmanifest" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "site.webmanifest"
+  source       = "${path.module}/../site.webmanifest"
+  content_type = "application/manifest+json"
+  etag         = filemd5("${path.module}/../site.webmanifest")
+}

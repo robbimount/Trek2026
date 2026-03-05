@@ -54,6 +54,7 @@ resource "aws_cloudfront_distribution" "website" {
   default_root_object = "index.html"
   price_class         = "PriceClass_100"
   comment             = "Pioneer Trek 2026 — Mount Saratoga Stake"
+  aliases             = ["mountsaratogatrek2026.org", "www.mountsaratogatrek2026.org"]
   tags                = var.common_tags
 
   origin {
@@ -103,7 +104,9 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = "arn:aws:acm:us-east-1:437005033727:certificate/ee038a6c-c08d-4be8-b7d1-1c135d0125db"
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }
 

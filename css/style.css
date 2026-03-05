@@ -1,0 +1,881 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS Custom Properties
+   ========================================================================== */
+
+:root {
+  --color-primary:   #2D6BB5;
+  --color-accent:    #D9A030;
+  --color-bg:        #FBF7EE;
+  --color-bg-light:  #FFFFFF;
+  --color-text-dark: #3D2612;
+  --color-earth:     #8C5A38;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Open Sans', system-ui, sans-serif;
+}
+
+/* Selection */
+::-moz-selection {
+  background: var(--color-accent);
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   Base / Typography
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   Header / Nav
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(45, 107, 181, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: box-shadow 0.2s ease;
+}
+
+.nav-scrolled {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-cta {
+  font-size: 0.9rem;
+  padding: 0.45rem 1.1rem;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #a97418;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(200, 146, 31, 0.45);
+  color: #fff;
+}
+
+.btn-large {
+  font-size: 1.1rem;
+  padding: 0.9rem 2.2rem;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10, 28, 60, 0.72) 0%,
+      rgba(10, 28, 60, 0.55) 50%,
+      rgba(30, 12, 4, 0.68) 100%
+    ),
+    url("https://www.churchofjesuschrist.org/imgs/c15df8f5fb1b239aa2bfb7653a3dd139cb11b60a/full/!1920%2C1280/0/default")
+    center center / cover no-repeat;
+  padding: 6rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 0.75rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
+}
+
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  color: #fff;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-dates {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  margin: 0 0 2rem;
+}
+
+/* ==========================================================================
+   Info Section
+   ========================================================================== */
+
+.info-section {
+  padding: 6rem 0;
+  background: var(--color-bg);
+}
+
+.section-heading {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 3rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.info-card {
+  background: var(--color-bg-light);
+  border-radius: 12px;
+  border-top: 4px solid var(--color-earth);
+  padding: 2rem 1.75rem;
+  box-shadow: 0 2px 16px rgba(42, 26, 14, 0.08);
+  text-align: center;
+}
+
+.info-card-icon {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.info-card-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.info-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.info-card-primary {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 0.15rem 0;
+}
+
+.info-card-secondary {
+  font-size: 0.88rem;
+  color: var(--color-earth);
+  margin: 0.4rem 0 0;
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+
+.about-section {
+  padding: 6rem 0;
+  background: var(--color-bg-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-content h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: var(--color-earth);
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+.pioneer-quote {
+  border-left: 4px solid var(--color-accent);
+  margin: 2rem 0 0;
+  padding: 1rem 1.5rem;
+  background: var(--color-bg);
+  border-radius: 0 8px 8px 0;
+}
+
+.pioneer-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-text-dark);
+  margin: 0 0 0.5rem;
+}
+
+.pioneer-quote cite {
+  font-size: 0.85rem;
+  color: var(--color-earth);
+  font-style: normal;
+}
+
+.about-visual {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(42, 26, 14, 0.18);
+  display: block;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Register Section
+   ========================================================================== */
+
+.register-section {
+  padding: 6rem 0;
+  background: var(--color-primary);
+}
+
+.register-content {
+  text-align: center;
+}
+
+.register-heading {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.register-subtext {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.btn-register {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.register-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 2rem;
+}
+
+.register-image {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Schedule / Timeline
+   ========================================================================== */
+
+.schedule-section {
+  padding: 6rem 0;
+  background: var(--color-bg-light);
+}
+
+.timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 660px;
+  position: relative;
+}
+
+/* Vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(140px + 7px); /* date width + half marker */
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-primary));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+  position: relative;
+}
+
+.timeline-date {
+  min-width: 140px;
+  text-align: right;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-earth);
+  flex-shrink: 0;
+}
+
+.timeline-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-bg-light);
+  box-shadow: 0 0 0 2px var(--color-accent);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-event {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+/* Highlight — the Trek itself */
+.timeline-item--highlight .timeline-date {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+}
+
+.timeline-item--highlight .timeline-marker {
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary);
+  margin-left: -3px; /* keep centered on the line */
+}
+
+.timeline-item--highlight .timeline-event {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-earth);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-stake {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.footer-church {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.5rem 0 0;
+}
+
+/* ==========================================================================
+   Responsive — 768px
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(45, 107, 181, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link,
+  .nav-cta {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    min-height: 220px;
+    order: -1;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+
+  /* Timeline — collapse to single column */
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2.5rem;
+    gap: 0.2rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 10px;
+  }
+
+  .timeline-date {
+    min-width: unset;
+    text-align: left;
+  }
+
+  .schedule-section {
+    padding: 4rem 0;
+  }
+}
+
+/* ==========================================================================
+   Responsive — 480px
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .info-section,
+  .about-section,
+  .register-section {
+    padding: 4rem 0;
+  }
+
+  .info-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .btn-large {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

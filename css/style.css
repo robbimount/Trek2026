@@ -602,6 +602,90 @@ a {
   color: var(--color-primary);
 }
 
+/* ===== FOOD SECTION ===== */
+.food-section {
+  background: var(--color-bg-light);
+  padding: 6rem 0;
+}
+
+@media (max-width: 600px) {
+  .food-section { padding: 4rem 0; }
+}
+
+.food-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.food-icon svg {
+  color: var(--color-accent);
+}
+
+.food-body {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.food-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.food-committee-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--color-bg);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.75rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.food-committee-icon {
+  flex-shrink: 0;
+  color: var(--color-accent);
+  margin-top: 0.2rem;
+}
+
+.food-committee-card p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.food-dietary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.food-dietary-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--color-bg);
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.food-dietary-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */

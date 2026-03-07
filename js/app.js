@@ -50,6 +50,15 @@ const translations = {
     'event-4-name':      'Squaredancing Activity',
     'event-5-date':      'Jul 13\u201316, 2026',
     'event-5-name':      'Pioneer Trek',
+    // Food
+    'nav-food':           'Food',
+    'food-heading':       'Food & Dietary Needs',
+    'food-p1':            'Trek promises to be an incredible opportunity for our youth this year, and we are eagerly anticipating the chance to be on trek with the youth. Our food committee is dedicated to ensuring that everyone is well-fed and safe.',
+    'food-p2':            'Our food committee chairs, Bro and Sister Sullivan manage multiple dietary concerns in their family, including Type 1 diabetes and celiac disease. They understand the importance of accommodating specific dietary needs. If you have youth with special dietary considerations, they would love to work with you and help your youth feel seen and cared for. To help us prepare, please fill out the registration form to let us know if you have any dietary requirements or medical conditions, such as:',
+    'food-item-gluten':   'Gluten concerns',
+    'food-item-dairy':    'Dairy intolerance',
+    'food-item-allergies':'Food allergies',
+    'food-item-other':    'Any other dietary needs',
     // Register
     'register-heading':  'Ready to Trek?',
     'register-sub1':     'Register for Pioneer Trek 2026!',
@@ -110,6 +119,15 @@ const translations = {
     'event-4-name':      'Actividad de Baile Cuadrado',
     'event-5-date':      '13 al 16 de julio de 2026',
     'event-5-name':      'Trek Pionero',
+    // Food
+    'nav-food':           'Comida',
+    'food-heading':       'Comida y Necesidades Diet\u00e9ticas',
+    'food-p1':            'El Trek promete ser una oportunidad incre\u00edble para nuestros j\u00f3venes este a\u00f1o, y esperamos con ansias la oportunidad de estar en el trek con ellos. Nuestro comit\u00e9 de alimentos est\u00e1 dedicado a garantizar que todos est\u00e9n bien alimentados y seguros.',
+    'food-p2':            'Los presidentes de nuestro comit\u00e9 de alimentos, el Hermano y la Hermana Sullivan, manejan m\u00faltiples preocupaciones diet\u00e9ticas en su familia, incluyendo diabetes tipo 1 y enfermedad cel\u00edaca. Entienden la importancia de acomodar necesidades diet\u00e9ticas espec\u00edficas. Si tiene j\u00f3venes con consideraciones diet\u00e9ticas especiales, les encantar\u00eda trabajar con usted y ayudar a que sus j\u00f3venes se sientan vistos y cuidados. Para ayudarnos a prepararnos, por favor complete el formulario de registro para informarnos si tiene alg\u00fan requisito diet\u00e9tico o condici\u00f3n m\u00e9dica, como:',
+    'food-item-gluten':   'Problemas con el gluten',
+    'food-item-dairy':    'Intolerancia a los l\u00e1cteos',
+    'food-item-allergies':'Alergias alimentarias',
+    'food-item-other':    'Cualquier otra necesidad diet\u00e9tica',
     // Register
     'register-heading':  '\u00bfListo para el Trek?',
     'register-sub1':     '\u00a1Reg\u00edstrate para el Trek Pionero 2026!',

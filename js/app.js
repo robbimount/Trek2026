@@ -7,6 +7,7 @@ const translations = {
     'page-title':        'Mount Saratoga Stake Pioneer Trek 2026',
     // Nav
     'nav-brand':         'Mount Saratoga Stake',
+    'nav-theme':         'Theme',
     'nav-about':         'About',
     'nav-info':          'Trek Info',
     'nav-schedule':      'Schedule',
@@ -27,6 +28,9 @@ const translations = {
     'who-title':         'Who',
     'who-primary':       'ALL YOUTH',
     'who-secondary':     'Turning 14 in 2026 through Graduating Seniors',
+    // Theme
+    'theme-heading':     'Theme',
+    'theme-body':        'As your youth walks the same sacred ground where faithful pioneers endured unimaginable hardship, our prayer is that they will come to know Jesus Christ in a deeper, more personal way. He is the One who rescues us in our greatest moments of need, just as He rescued those faithful saints in 1856.',
     // About
     'about-heading':     'Purposes of Handcart Trek Reenactments',
     'about-p1':          'From 1856 to 1860, about 3,000 Latter-day Saints pulled handcarts across the American plains to gather in the Salt Lake Valley. These pioneers trekked more than a thousand miles through heat and cold; through mud, sand, and sometimes snow; and through rivers and over mountains. They faced trials that required great faith and perseverance.',
@@ -76,6 +80,7 @@ const translations = {
     'page-title':        'Trek Pionero 2026 \u2014 Estaca Monte Saratoga',
     // Nav
     'nav-brand':         'Estaca Monte Saratoga',
+    'nav-theme':         'Tema',
     'nav-about':         'Acerca de',
     'nav-info':          'Info del Trek',
     'nav-schedule':      'Calendario',
@@ -96,6 +101,9 @@ const translations = {
     'who-title':         '\u00bfQui\u00e9nes?',
     'who-primary':       'TODOS LOS J\u00d3VENES',
     'who-secondary':     'J\u00f3venes que cumplen 14 a\u00f1os en 2026 hasta los que se grad\u00faan de preparatoria',
+    // Theme
+    'theme-heading':     'Tema',
+    'theme-body':        'Mientras sus j\u00f3venes caminan por la misma tierra sagrada donde fieles pioneros soportaron dificultades inimaginables, nuestra oraci\u00f3n es que lleguen a conocer a Jesucristo de una manera m\u00e1s profunda y personal. \u00c9l es quien nos rescata en nuestros momentos m\u00e1s dif\u00edciles, tal como rescat\u00f3 a esos fieles santos en 1856.',
     // About
     'about-heading':     'Prop\u00f3sitos de las Recreaciones del Trek',
     'about-p1':          'De 1856 a 1860, alrededor de 3,000 Santos de los \u00daltimos D\u00edas jalaron carretillas de mano por las llanuras americanas para reunirse en el Valle del Lago Salado. Estos pioneros recorrieron m\u00e1s de mil millas entre calor y fr\u00edo; entre lodo, arena y a veces nieve; a trav\u00e9s de r\u00edos y sobre monta\u00f1as. Enfrentaron pruebas que requirieron gran fe y perseverancia.',

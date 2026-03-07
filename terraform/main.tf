@@ -185,3 +185,27 @@ resource "aws_s3_object" "site_webmanifest" {
   content_type = "application/manifest+json"
   etag         = filemd5("${path.module}/../site.webmanifest")
 }
+
+resource "aws_s3_object" "favicon_ico" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "favicon.ico"
+  source       = "${path.module}/../favicon.ico"
+  content_type = "image/x-icon"
+  etag         = filemd5("${path.module}/../favicon.ico")
+}
+
+resource "aws_s3_object" "icon_svg" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "icon.svg"
+  source       = "${path.module}/../icon.svg"
+  content_type = "image/svg+xml"
+  etag         = filemd5("${path.module}/../icon.svg")
+}
+
+resource "aws_s3_object" "icon_png" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "icon.png"
+  source       = "${path.module}/../icon.png"
+  content_type = "image/png"
+  etag         = filemd5("${path.module}/../icon.png")
+}

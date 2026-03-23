@@ -209,3 +209,11 @@ resource "aws_s3_object" "icon_png" {
   content_type = "image/png"
   etag         = filemd5("${path.module}/../icon.png")
 }
+
+resource "aws_s3_object" "img_activity_jpg" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "img/activity.jpg"
+  source       = "${path.module}/../img/activity.jpg"
+  content_type = "image/jpeg"
+  etag         = filemd5("${path.module}/../img/activity.jpg")
+}

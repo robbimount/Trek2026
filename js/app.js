@@ -8,17 +8,18 @@ const translations = {
     // Nav
     'nav-brand':         'Mount Saratoga Stake',
     'nav-theme':         'Theme',
+    'nav-activities':    'Activities',
     'nav-about':         'About',
     'nav-info':          'Trek Info',
     'nav-schedule':      'Schedule',
-    'nav-register':      'Register',
+    'nav-register':      'Late Registration',
     'lang-toggle':       'Español',
     // Hero
     'hero-eyebrow':      'Mount Saratoga Stake',
     'hero-title':        'Pioneer Trek 2026',
     'hero-subtitle':     'Martin\'s Cove & Sixth Crossing',
     'hero-dates':        'July 13–16, 2026',
-    'hero-cta':          'Register Now',
+    'hero-cta':          'Late Registration',
     // Info cards
     'info-heading':      'Trek at a Glance',
     'dates-title':       'Dates',
@@ -64,10 +65,17 @@ const translations = {
     'food-item-allergies':'Food allergies',
     'food-item-other':    'Any other dietary needs',
     // Register
+    // Upcoming Activities
+    'activities-heading': 'Upcoming Activities',
+    'activities-img-alt': 'Pioneer Trek activity',
+    // Video
+    'video-heading':     'Highlights from our Trek in 2022',
+    'video-subtext':     'Watch highlights from our 2022 Pioneer Trek experience.',
+    // Register
     'register-heading':  'Ready to Trek?',
     'register-sub1':     'Register for Pioneer Trek 2026!',
-    'register-sub2':     'Complete the registration form along with your medical release form. Please complete registration before Mar 15, 2026.',
-    'register-btn':      'Complete Registration Form',
+    'register-sub2':     'Complete the registration form along with your medical release form.',
+    'register-btn':      'Late Registration',
     'register-note':     'You will be redirected to a secure Google Form.',
     'register-img-alt':  'Pioneer Trek participants pulling handcarts',
     // Footer
@@ -81,17 +89,18 @@ const translations = {
     // Nav
     'nav-brand':         'Estaca Monte Saratoga',
     'nav-theme':         'Tema',
+    'nav-activities':    'Actividades',
     'nav-about':         'Acerca de',
     'nav-info':          'Info del Trek',
     'nav-schedule':      'Calendario',
-    'nav-register':      'Registrarse',
+    'nav-register':      'Registro tard\u00edo',
     'lang-toggle':       'English',
     // Hero
     'hero-eyebrow':      'Estaca Monte Saratoga',
     'hero-title':        'Trek Pionero 2026',
     'hero-subtitle':     'Martin\'s Cove & Sixth Crossing',
     'hero-dates':        '13 al 16 de julio de 2026',
-    'hero-cta':          'Regístrate ahora',
+    'hero-cta':          'Registro tard\u00edo',
     // Info cards
     'info-heading':      'El Trek de un Vistazo',
     'dates-title':       'Fechas',
@@ -137,10 +146,17 @@ const translations = {
     'food-item-allergies':'Alergias alimentarias',
     'food-item-other':    'Cualquier otra necesidad diet\u00e9tica',
     // Register
+    // Upcoming Activities
+    'activities-heading': 'Pr\u00f3ximas Actividades',
+    'activities-img-alt': 'Actividad del Trek Pionero',
+    // Video
+    'video-heading':     'Momentos destacados de nuestro Trek 2022',
+    'video-subtext':     'Mira los momentos m\u00e1s destacados de nuestro Trek Pionero 2022.',
+    // Register
     'register-heading':  '\u00bfListo para el Trek?',
     'register-sub1':     '\u00a1Reg\u00edstrate para el Trek Pionero 2026!',
-    'register-sub2':     'Completa el formulario de registro junto con tu formulario de autorizaci\u00f3n m\u00e9dica. Por favor, completa el registro antes del 15 de marzo de 2026.',
-    'register-btn':      'Completar Formulario de Registro',
+    'register-sub2':     'Completa el formulario de registro junto con tu formulario de autorizaci\u00f3n m\u00e9dica.',
+    'register-btn':      'Registro tard\u00edo',
     'register-note':     'Ser\u00e1s redirigido a un formulario seguro de Google.',
     'register-img-alt':  'Participantes del Trek Pionero jalando carretillas de mano',
     // Footer

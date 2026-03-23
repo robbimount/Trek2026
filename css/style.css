@@ -313,6 +313,7 @@ a {
   max-width: 760px;
 }
 
+
 .hero-eyebrow {
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -648,12 +649,13 @@ a {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  aspect-ratio: 16 / 9;
 }
 
 .theme-image {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -794,6 +796,7 @@ a {
    ========================================================================== */
 
 @media (max-width: 768px) {
+
   .nav-toggle {
     display: flex;
   }
@@ -885,6 +888,7 @@ a {
   .register-section {
     padding: 4rem 0;
   }
+
 
   .info-card {
     padding: 1.5rem 1.25rem;
@@ -1055,5 +1059,63 @@ a {
   h3 {
     page-break-after: avoid;
   }
+}
+
+/* ==========================================================================
+   Upcoming Activities Section
+   ========================================================================== */
+
+.activities-section {
+  background: var(--color-bg);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.activities-image {
+  display: block;
+  margin: 2rem auto 0;
+  max-width: 50%;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .activities-image {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Video / Previous Trek Section
+   ========================================================================== */
+
+.video-section {
+  background: var(--color-bg-light);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.video-subtext {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.video-embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-embed-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
 }
 

@@ -272,6 +272,48 @@ const navLinks = document.getElementById('nav-links');
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('nav-open');
+    menuToggle.classList.toggle('menu-open', isOpen);
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close nav when clicking a link (already handled for smooth scroll, but covers external links too)
+  navLinks.addEventListener('click', e => {
+    if (e.target.closest('a')) {
+      navLinks.classList.remove('nav-open');
+      menuToggle.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// =============================================================
+// Scroll-triggered fade-in animations
+// =============================================================
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+}
+
+// =============================================================
+// Back-to-top button
+// =============================================================
+
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }

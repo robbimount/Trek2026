@@ -249,7 +249,29 @@ a {
   height: 2px;
   background: #fff;
   border-radius: 2px;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform 0.25s ease, opacity 0.2s ease, background 0.15s;
+}
+
+/* Hamburger → X when nav is open */
+.nav-toggle.menu-open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.menu-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle.menu-open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle:hover .hamburger-bar {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* ==========================================================================
@@ -292,6 +314,7 @@ a {
    ========================================================================== */
 
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -307,6 +330,25 @@ a {
     url("https://www.churchofjesuschrist.org/imgs/c15df8f5fb1b239aa2bfb7653a3dd139cb11b60a/full/!1920%2C1280/0/default")
     center center / cover no-repeat;
   padding: 6rem 1.5rem;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.65);
+  animation: hero-bounce 2.2s ease-in-out infinite;
+  line-height: 0;
+}
+
+@keyframes hero-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.65; }
+  50%       { transform: translateX(-50%) translateY(10px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll { animation: none; }
 }
 
 .hero-content {
@@ -379,6 +421,12 @@ a {
   padding: 2rem 1.75rem;
   box-shadow: 0 2px 16px rgba(42, 26, 14, 0.08);
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(42, 26, 14, 0.16);
 }
 
 .info-card-icon {
@@ -760,6 +808,7 @@ a {
 
 .site-footer {
   background: var(--color-earth);
+  border-top: 3px solid var(--color-accent);
   padding: 2.5rem 0;
   text-align: center;
 }
@@ -783,6 +832,13 @@ a {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
+}
+
+.footer-dates {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+  margin: 0.2rem 0 0;
 }
 
 .footer-copy {
@@ -822,11 +878,17 @@ a {
     text-align: center;
   }
 
-  .nav-link,
-  .nav-cta {
+  .nav-link {
     display: block;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    margin: 0.5rem auto;
+    padding: 0.65rem 1.75rem;
+    font-size: 0.95rem;
   }
 
 
@@ -885,10 +947,15 @@ a {
 
   .info-section,
   .about-section,
-  .register-section {
+  .register-section,
+  .activities-section,
+  .video-section {
     padding: 4rem 0;
   }
 
+  .info-grid {
+    gap: 1.25rem;
+  }
 
   .info-card {
     padding: 1.5rem 1.25rem;
@@ -897,6 +964,34 @@ a {
   .btn-large {
     font-size: 1rem;
     padding: 0.8rem 1.8rem;
+  }
+
+  /* Timeline — improve readability on small screens */
+  .timeline-date {
+    font-size: 0.85rem;
+  }
+
+  /* Pioneer quote — tighten padding */
+  .pioneer-quote {
+    padding: 0.85rem 1rem;
+  }
+
+  /* Food committee card — stack icon + text */
+  .food-committee-card {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  /* Register subtext — remove constraining max-width */
+  .register-subtext {
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Footer — breathe a little more */
+  .footer-inner {
+    gap: 0.5rem;
   }
 }
 
@@ -1067,23 +1162,19 @@ a {
 
 .activities-section {
   background: var(--color-bg);
-  padding: 4rem 1.5rem;
+  padding: 6rem 0;
   text-align: center;
 }
 
 .activities-image {
   display: block;
   margin: 2rem auto 0;
-  max-width: 50%;
-  border-radius: 6px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 768px) {
-  .activities-image {
-    width: 100%;
-    max-width: 100%;
-  }
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
 }
 
 /* ==========================================================================
@@ -1092,7 +1183,7 @@ a {
 
 .video-section {
   background: var(--color-bg-light);
-  padding: 4rem 1.5rem;
+  padding: 6rem 0;
   text-align: center;
 }
 
@@ -1117,5 +1208,61 @@ a {
   height: 100%;
   border: 0;
   border-radius: 6px;
+}
+
+/* ==========================================================================
+   Scroll-triggered animations
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Stagger info cards */
+  .info-card:nth-child(2).animate-on-scroll { transition-delay: 0.12s; }
+  .info-card:nth-child(3).animate-on-scroll { transition-delay: 0.24s; }
+}
+
+/* ==========================================================================
+   Back-to-top button
+   ========================================================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #a97418;
+  transform: translateY(-2px);
 }
 

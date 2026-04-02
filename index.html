@@ -66,6 +66,11 @@
       <p class="hero-dates" data-i18n="hero-dates">July 13–16, 2026</p>
       <a href="#register" class="btn btn-primary btn-large" data-i18n="hero-cta">Late Registration</a>
     </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
   </section>
 
   <!-- ===== INFO CARDS ===== -->
@@ -75,7 +80,7 @@
       <div class="info-grid">
 
         <!-- Dates Card -->
-        <article class="info-card" aria-label="Trek dates">
+        <article class="info-card animate-on-scroll" aria-label="Trek dates">
           <div class="info-card-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -90,7 +95,7 @@
         </article>
 
         <!-- Locations Card -->
-        <article class="info-card" aria-label="Trek locations">
+        <article class="info-card animate-on-scroll" aria-label="Trek locations">
           <div class="info-card-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -104,7 +109,7 @@
         </article>
 
         <!-- Who Card -->
-        <article class="info-card" aria-label="Who">
+        <article class="info-card animate-on-scroll" aria-label="Who">
           <div class="info-card-icon" aria-hidden="true">
             <!-- Pioneer girl (bonnet) + pioneer boy (flat-brim hat) -->
             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="54" viewBox="0 0 72 54" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -136,7 +141,7 @@
 
   <!-- ===== THEME ===== -->
   <section id="theme" class="theme-section" aria-labelledby="theme-heading">
-    <div class="container theme-grid">
+    <div class="container theme-grid animate-on-scroll">
       <div class="theme-text">
         <h2 id="theme-heading" class="section-heading" data-i18n="theme-heading">Theme</h2>
         <p class="theme-slogan">Conoce a Jesucristo: Our Ultimate Rescuer</p>
@@ -173,7 +178,7 @@
   <!-- ===== ABOUT ===== -->
   <section id="about" class="about-section" aria-labelledby="about-heading">
     <div class="container">
-      <div class="about-grid">
+      <div class="about-grid animate-on-scroll">
         <div class="about-content">
           <h2 id="about-heading" class="section-heading" data-i18n="about-heading">Purposes of Handcart Trek Reenactments</h2>
           <p data-i18n="about-p1">From 1856 to 1860, about 3,000 Latter-day Saints pulled handcarts across the American plains to gather in the Salt Lake Valley. These pioneers trekked more than a thousand miles through heat and cold; through mud, sand, and sometimes snow; and through rivers and over mountains. They faced trials that required great faith and perseverance.</p>
@@ -224,7 +229,7 @@
   <section id="schedule" class="schedule-section" aria-labelledby="schedule-heading">
     <div class="container">
       <h2 id="schedule-heading" class="section-heading" data-i18n="schedule-heading">Calendar of Events</h2>
-      <ol class="timeline" role="list">
+      <ol class="timeline animate-on-scroll" role="list">
 
         <li class="timeline-item">
           <time class="timeline-date" datetime="2026-04-15" data-i18n="event-1-date">Apr 15, 2026</time>
@@ -273,7 +278,7 @@
         <h2 id="food-heading" class="section-heading" data-i18n="food-heading">Food &amp; Dietary Needs</h2>
       </div>
 
-      <div class="food-body">
+      <div class="food-body animate-on-scroll">
         <p data-i18n="food-p1">Trek promises to be an incredible opportunity for our youth this year, and we are eagerly anticipating the chance to be on trek with the youth. Our food committee is dedicated to ensuring that everyone is well-fed and safe.</p>
 
         <div class="food-committee-card">
@@ -298,7 +303,7 @@
 
   <!-- ===== REGISTER ===== -->
   <section id="register" class="register-section" aria-labelledby="register-heading">
-    <div class="container register-content">
+    <div class="container register-content animate-on-scroll">
       <h2 id="register-heading" class="register-heading" data-i18n="register-heading">Ready to Trek?</h2>
       <p class="register-subtext" data-i18n="register-sub1">Register for Pioneer Trek 2026!</p>
       <p class="register-subtext" data-i18n="register-sub2">Complete the registration form along with your medical release form.</p>
@@ -330,9 +335,16 @@
     <div class="container footer-inner">
       <p class="footer-stake" data-i18n="footer-stake">Saratoga Springs, UT | Mount Saratoga Stake</p>
       <p class="footer-church" data-i18n="footer-church">The Church of Jesus Christ of Latter-day Saints</p>
+      <p class="footer-dates">July 13–16, 2026 &middot; Martin's Cove &amp; Sixth Crossing, Wyoming</p>
       <p class="footer-copy" data-i18n="footer-copy">© 2026 Mount Saratoga Stake. All rights reserved.</p>
     </div>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="js/app.js"></script>
 </body>

@@ -217,3 +217,35 @@ resource "aws_s3_object" "img_activity_jpg" {
   content_type = "image/jpeg"
   etag         = filemd5("${path.module}/../img/activity.jpg")
 }
+
+resource "aws_s3_object" "directory_html" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "directory.html"
+  source       = "${path.module}/../directory.html"
+  content_type = "text/html; charset=utf-8"
+  etag         = filemd5("${path.module}/../directory.html")
+}
+
+resource "aws_s3_object" "css_directory" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "css/directory.css"
+  source       = "${path.module}/../css/directory.css"
+  content_type = "text/css; charset=utf-8"
+  etag         = filemd5("${path.module}/../css/directory.css")
+}
+
+resource "aws_s3_object" "js_directory" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "js/directory.js"
+  source       = "${path.module}/../js/directory.js"
+  content_type = "application/javascript; charset=utf-8"
+  etag         = filemd5("${path.module}/../js/directory.js")
+}
+
+resource "aws_s3_object" "data_directory_json" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "data/directory.json"
+  source       = "${path.module}/../data/directory.json"
+  content_type = "application/json; charset=utf-8"
+  etag         = filemd5("${path.module}/../data/directory.json")
+}

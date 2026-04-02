@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trek Family Directory — Mount Saratoga Stake Pioneer Trek 2026</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/directory.css">
+</head>
+
+<body class="directory-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="/" class="nav-brand" aria-label="Mount Saratoga Stake home">
+        Mount Saratoga Stake
+      </a>
+      <span class="nav-page-title">Trek Family Directory</span>
+      <button id="sign-out-btn" class="btn-sign-out" style="display:none" aria-label="Sign out">
+        Sign Out
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== SIGN-IN SCREEN ===== -->
+  <div id="sign-in-screen" class="auth-screen" role="main" aria-label="Sign in to access the directory">
+    <div class="auth-card">
+      <div class="auth-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <h1 class="auth-title">Trek Family Directory</h1>
+      <p class="auth-subtitle">Pioneer Trek 2026 &mdash; Mount Saratoga Stake</p>
+      <p class="auth-description">This directory is for authorized trek participants and leaders. Sign in with your Google account to continue.</p>
+      <div id="google-signin-btn" class="google-btn-wrap"></div>
+      <p class="auth-note">Access is limited to approved accounts. Contact your trek leader if you need access.</p>
+    </div>
+  </div>
+
+  <!-- ===== ACCESS DENIED ===== -->
+  <div id="access-denied-screen" class="auth-screen" style="display:none" role="main" aria-label="Access denied">
+    <div class="auth-card auth-card--denied">
+      <div class="auth-icon auth-icon--denied" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        </svg>
+      </div>
+      <h1 class="auth-title">Access Denied</h1>
+      <p class="auth-description">Your account (<span id="denied-email" class="denied-email"></span>) is not authorized to view this directory.</p>
+      <p class="auth-description">Please contact your trek leader to request access.</p>
+      <button id="try-different-account-btn" class="btn btn-primary">Try a Different Account</button>
+    </div>
+  </div>
+
+  <!-- ===== DIRECTORY ===== -->
+  <main id="directory-screen" style="display:none" aria-label="Trek family directory">
+    <section class="directory-hero">
+      <div class="container">
+        <h1 class="directory-heading">Trek Family Directory</h1>
+        <p class="directory-subheading">Pioneer Trek 2026 &mdash; July 13&ndash;16 &middot; Martin's Cove &amp; Sixth Crossing</p>
+        <p class="directory-welcome">Welcome, <span id="user-name" class="user-name"></span></p>
+      </div>
+    </section>
+
+    <section id="announcements-section" class="announcements-section" aria-labelledby="announcements-heading" style="display:none">
+      <div class="container">
+        <h2 id="announcements-heading" class="section-heading">Leader Announcements</h2>
+        <div id="announcements-list" class="announcements-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="directory-content" aria-label="Families list">
+      <div class="container">
+        <div id="families-summary" class="families-summary" aria-live="polite"></div>
+        <div id="families-grid" class="families-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+      <p class="footer-stake">Saratoga Springs, UT | Mount Saratoga Stake</p>
+      <p class="footer-church">The Church of Jesus Christ of Latter-day Saints</p>
+      <p class="footer-dates">July 13–16, 2026 &middot; Martin's Cove &amp; Sixth Crossing, Wyoming</p>
+      <p class="footer-copy">&copy; 2026 Mount Saratoga Stake. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="js/directory.js"></script>
+</body>
+
+</html>

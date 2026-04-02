@@ -12,6 +12,7 @@ const translations = {
     'nav-about':         'About',
     'nav-info':          'Trek Info',
     'nav-schedule':      'Schedule',
+    'nav-directory':     'Directory',
     'nav-register':      'Late Registration',
     'lang-toggle':       'Español',
     // Hero
@@ -93,6 +94,7 @@ const translations = {
     'nav-about':         'Acerca de',
     'nav-info':          'Info del Trek',
     'nav-schedule':      'Calendario',
+    'nav-directory':     'Directorio',
     'nav-register':      'Registro tard\u00edo',
     'lang-toggle':       'English',
     // Hero

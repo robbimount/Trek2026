@@ -81,7 +81,7 @@
       "name": "Family 4",
       "accessEmails": [
         "bautistadonatus@gmail.com",
-        "otherfamily@gmail.com"
+        "kaiyaethington11@gmail.com"
       ],
       "members": [
         {"ward":"Mount Saratoga 2nd Ward","name":"Emilio Bautista","phone":"406 262 3176","family":4,"gender":"Adult","age":"","role":"Pa"},
@@ -101,7 +101,8 @@
     {
       "name": "Family 5",
       "accessEmails": [
-        "otherfamily@gmail.com"
+        "adrianusaperalta@gmail.com",
+        "kristenmjones16@gmail.com"
       ],
       "members": [
         {"ward":"Mount Saratoga 2nd Ward","name":"Adrian Peralta Polanco","phone":"","family":5,"gender":"Adult","age":"","role":"Pa"},
@@ -316,13 +317,14 @@
         {"ward":"Sunrise Meadows 3rd Ward","name":"Tyler Hatch","phone":"801-518-3154","family":15,"gender":"Boy","age":14,"role":""},
         {"ward":"Mount Saratoga 2nd Ward","name":"Jacob Fresh","phone":"303-656-6007","family":15,"gender":"Boy","age":17,"role":""},
         {"ward":"Sunrise Meadows 2nd Ward","name":"Avery Clubb","phone":"801-755-1651","family":15,"gender":"Girl","age":17,"role":""},
-        {"ward":"Talus Ridge 2nd Ward","name":"Trey Wyner","phone":"801-915-231","family":15,"gender":"Boy","age":15,"role":""}
+        {"ward":"Talus Ridge 2nd Ward","name":"Trey Wyner","phone":"801-915-2311","family":15,"gender":"Boy","age":15,"role":""}
       ]
     },
     {
       "name": "Family 16",
       "accessEmails": [
-        "wolfybeast18@gmail.com"
+        "wolfybeast18@gmail.com",
+        "hill.bailey02@gmail.com"
       ],
       "members": [
         {"ward":"Mount Saratoga 2nd Ward","name":"Gabe Wolford","phone":"","family":16,"gender":"Adult","age":"","role":"Pa"},
@@ -359,7 +361,7 @@
     {
       "name": "Family 18",
       "accessEmails": [
-        "otherfamily@gmail.com"
+        "stwoodburyfamily@gmail.com"
       ],
       "members": [
         {"ward":"Mount Saratoga 2nd Ward","name":"Trevan Woodbury","phone":"385-286-9755","family":18,"gender":"Adult","age":"","role":"Pa"},
@@ -377,6 +379,7 @@
     {
       "name": "Family 19",
       "accessEmails": [
+        "amymarquis@yahoo.com",
         "amysbarnwell@gmail.com"
       ],
       "members": [
@@ -395,7 +398,7 @@
     {
       "name": "Family 20",
       "accessEmails": [
-        "johnrand@byulaw.net",
+        "jonrand@byulaw.net",
         "racheliditto@gmail.com"
       ],
       "members": [

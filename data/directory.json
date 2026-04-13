@@ -31,7 +31,7 @@
         {"ward":"Sunrise Meadows 3rd Ward","name":"Lynlee Sperry","phone":"385-392-8312","family":1,"gender":"Girl","age":16,"role":""},
         {"ward":"Sunrise Meadows 2nd Ward","name":"Jessica Johnson","phone":"","family":1,"gender":"Girl","age":15,"role":""},
         {"ward":"Sunrise Meadows 1st Ward","name":"Max Hudson","phone":"801-319-3551","family":1,"gender":"Boy","age":17,"role":""},
-        {"ward":"Talus Ridge 2nd Ward","name":"Max Hanson","phone":"","family":1,"gender":"Boy","age":16,"role":""},
+        {"ward":"Talus Ridge 2nd Ward","name":"Max Hanson","phone":"801-691-2645","family":1,"gender":"Boy","age":16,"role":""},
         {"ward":"Mount Saratoga 2nd Ward","name":"Emily Fresh","phone":"303-524-2229","family":1,"gender":"Girl","age":16,"role":""},
         {"ward":"Talus Ridge 2nd Ward","name":"Bryken Denney","phone":"385-321-0220","family":1,"gender":"Boy","age":13,"role":""}
       ]
@@ -113,7 +113,7 @@
         {"ward":"Saratoga Springs 6th Ward","name":"Ammeri Rivera","phone":"","family":5,"gender":"Girl","age":14,"role":""},
         {"ward":"Saratoga Springs 6th Ward","name":"ANGELICA PEREZ","phone":3854005411,"family":5,"gender":"Girl","age":15,"role":""},
         {"ward":"Saratoga Springs 6th Ward","name":"Leny Sariah Paz","phone":3854889874,"family":5,"gender":"Girl","age":17,"role":""},
-        {"ward":"Sunrise Meadows 3rd Ward","name":"Howie Olmos","phone":"(385)392-0782","family":5,"gender":"Boy","age":13,"role":""},
+        {"ward":"Sunrise Meadows 3rd Ward","name":"Howie Olmos","phone":"385-392-0782","family":5,"gender":"Boy","age":13,"role":""},
         {"ward":"Talus Ridge 2nd Ward","name":"Kolby Mickelsen","phone":"208-589-1193","family":5,"gender":"Boy","age":14,"role":""},
         {"ward":"Sunrise Meadows 2nd Ward","name":"Robert Merrell","phone":"385-535-2564","family":5,"gender":"Boy","age":17,"role":""},
         {"ward":"Sunrise Meadows 1st Ward","name":"Lily Card","phone":"385-439-5428","family":5,"gender":"Girl","age":16,"role":""}
@@ -196,7 +196,8 @@
         {"ward":"Mount Saratoga 1st Ward","name":"Marshall Hendriksen","phone":"","family":9,"gender":"Boy","age":13,"role":""},
         {"ward":"Mount Saratoga 1st Ward","name":"Addy Foster","phone":"385-266-2705","family":9,"gender":"Girl","age":14,"role":""},
         {"ward":"Mount Saratoga 2nd Ward","name":"Santiago Fjelsted","phone":"","family":9,"gender":"Boy","age":16,"role":""},
-        {"ward":"Mount Saratoga 1st Ward","name":"Katelyn Clegg","phone":"","family":9,"gender":"Girl","age":15,"role":""}
+        {"ward":"Mount Saratoga 1st Ward","name":"Katelyn Clegg","phone":"","family":9,"gender":"Girl","age":15,"role":""},
+        {"ward":"Saratoga Springs 6th Ward","name":"Victor Agudo","phone":"801-864-2311","family":9,"gender":"Boy","age":15,"role":""}
       ]
     },
     {
@@ -371,9 +372,10 @@
         {"ward":"Sunrise Meadows 2nd Ward","name":"Michael Thornton","phone":"949-773-5998","family":18,"gender":"Boy","age":13,"role":""},
         {"ward":"Sunrise Meadows 1st Ward","name":"Grant Jenson","phone":"801-318-2143","family":18,"gender":"Boy","age":16,"role":""},
         {"ward":"Mount Saratoga 2nd Ward","name":"Nikolai Harding","phone":"385-384-8660","family":18,"gender":"Boy","age":17,"role":""},
-        {"ward":"Talus Ridge 2nd Ward","name":"Nora Hanson","phone":"","family":18,"gender":"Girl","age":15,"role":""},
+        {"ward":"Talus Ridge 2nd Ward","name":"Nora Hanson","phone":"801-691-2601","family":18,"gender":"Girl","age":15,"role":""},
         {"ward":"Sunrise Meadows 2nd Ward","name":"Alyssa Dowell","phone":"801-850-2023","family":18,"gender":"Girl","age":16,"role":""},
-        {"ward":"Sunrise Meadows 3rd Ward","name":"Nash Bamgartner","phone":"435-671-1720","family":18,"gender":"Boy","age":14,"role":""}
+        {"ward":"Sunrise Meadows 3rd Ward","name":"Nash Bamgartner","phone":"435-671-1720","family":18,"gender":"Boy","age":14,"role":""},
+        {"ward":"Talus Ridge 2nd Ward","name":"Jack Gray","phone":"385-505-9406","family":18,"gender":"Boy","age":15,"role":""}
       ]
     },
     {
@@ -431,7 +433,8 @@
         {"ward":"Talus Ridge 2nd Ward","name":"Shaylee Camila Mower","phone":"801-641-6099","family":21,"gender":"Girl","age":16,"role":""},
         {"ward":"Sunrise Meadows 1st Ward","name":"Eden Card","phone":"","family":21,"gender":"Girl","age":14,"role":""},
         {"ward":"Mount Saratoga 1st Ward","name":"Conner Elkins","phone":"","family":21,"gender":"Boy","age":14,"role":""},
-        {"ward":"Sunrise Meadows 3rd Ward","name":"Michael Silveira","phone":"714-454-5420","family":21,"gender":"Boy","age":13,"role":""}
+        {"ward":"Sunrise Meadows 3rd Ward","name":"Michael Silveira","phone":"714-454-5420","family":21,"gender":"Boy","age":13,"role":""},
+        {"ward":"Talus Ridge 2nd Ward","name":"Jenson Gray","phone":"801-592-8842","family":21,"gender":"Boy","age":17,"role":""}
       ]
     }
   ]

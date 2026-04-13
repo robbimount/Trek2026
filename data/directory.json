@@ -106,7 +106,7 @@
       ],
       "members": [
         {"ward":"Mount Saratoga 2nd Ward","name":"Adrian Peralta Polanco","phone":"","family":5,"gender":"Adult","age":"","role":"Pa"},
-        {"ward":"Sunrise Meadows 2nd Ward","name":"Kristen Jones (Peralta)","phone":"","family":5,"gender":"Adult","age":"","role":"Ma"},
+        {"ward":"Mount Saratoga 2nd Ward","name":"Kristen Jones (Peralta)","phone":"","family":5,"gender":"Adult","age":"","role":"Ma"},
         {"ward":"Sunrise Meadows 3rd Ward","name":"Nathan Kerman","phone":"208-219-4047","family":5,"gender":"Boy","age":14,"role":""},
         {"ward":"Sunrise Meadows 2nd Ward","name":"Brooklyn Villarreal","phone":"","family":5,"gender":"Girl","age":13,"role":""},
         {"ward":"Talus Ridge 2nd Ward","name":"Rivers Shepherd","phone":"801-921-9635","family":5,"gender":"Boy","age":15,"role":""},

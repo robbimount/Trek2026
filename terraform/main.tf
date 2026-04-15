@@ -218,6 +218,14 @@ resource "aws_s3_object" "img_activity_jpg" {
   etag         = filemd5("${path.module}/../img/activity.jpg")
 }
 
+resource "aws_s3_object" "img_treklogo2_png" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "img/treklogo2.png"
+  source       = "${path.module}/../img/treklogo2.png"
+  content_type = "image/png"
+  etag         = filemd5("${path.module}/../img/treklogo2.png")
+}
+
 resource "aws_s3_object" "directory_html" {
   bucket       = aws_s3_bucket.website.id
   key          = "directory.html"
@@ -242,10 +250,122 @@ resource "aws_s3_object" "js_directory" {
   etag         = filemd5("${path.module}/../js/directory.js")
 }
 
-resource "aws_s3_object" "data_directory_json" {
-  bucket       = aws_s3_bucket.website.id
-  key          = "data/directory.json"
-  source       = "${path.module}/../data/directory.json"
-  content_type = "application/json; charset=utf-8"
-  etag         = filemd5("${path.module}/../data/directory.json")
+# NOTE: data/directory.json is intentionally NOT managed by Terraform.
+# It is initially uploaded manually and thereafter updated exclusively by
+# the admin Lambda (trek-save-directory). Managing it here would cause
+# terraform apply to overwrite admin edits.
+
+# ============================================================
+# Lambda — save directory (admin persistence endpoint)
+# ============================================================
+
+data "archive_file" "save_directory_lambda" {
+  type        = "zip"
+  source_file = "${path.module}/../lambda/save_directory.py"
+  output_path = "${path.module}/../lambda/save_directory.zip"
+}
+
+data "aws_iam_policy_document" "lambda_assume_role" {
+  statement {
+    actions = ["sts:AssumeRole"]
+    principals {
+      type        = "Service"
+      identifiers = ["lambda.amazonaws.com"]
+    }
+  }
+}
+
+resource "aws_iam_role" "save_directory_lambda" {
+  name               = "trek-save-directory-lambda"
+  assume_role_policy = data.aws_iam_policy_document.lambda_assume_role.json
+  tags               = var.common_tags
+}
+
+data "aws_iam_policy_document" "save_directory_lambda_perms" {
+  statement {
+    sid       = "Logs"
+    actions   = ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"]
+    resources = ["arn:aws:logs:*:*:*"]
+  }
+  statement {
+    sid       = "S3ReadWrite"
+    actions   = ["s3:GetObject", "s3:PutObject"]
+    resources = ["${aws_s3_bucket.website.arn}/data/directory.json"]
+  }
+  statement {
+    sid       = "CloudFrontInvalidate"
+    actions   = ["cloudfront:CreateInvalidation"]
+    resources = [aws_cloudfront_distribution.website.arn]
+  }
+}
+
+resource "aws_iam_role_policy" "save_directory_lambda" {
+  name   = "save-directory-lambda-policy"
+  role   = aws_iam_role.save_directory_lambda.id
+  policy = data.aws_iam_policy_document.save_directory_lambda_perms.json
+}
+
+resource "aws_lambda_function" "save_directory" {
+  function_name    = "trek-save-directory"
+  role             = aws_iam_role.save_directory_lambda.arn
+  handler          = "save_directory.lambda_handler"
+  runtime          = "python3.12"
+  filename         = data.archive_file.save_directory_lambda.output_path
+  source_code_hash = data.archive_file.save_directory_lambda.output_base64sha256
+
+  environment {
+    variables = {
+      S3_BUCKET          = aws_s3_bucket.website.id
+      S3_KEY             = "data/directory.json"
+      CF_DISTRIBUTION_ID = aws_cloudfront_distribution.website.id
+    }
+  }
+
+  tags = var.common_tags
+}
+
+# ============================================================
+# API Gateway HTTP API (v2)
+# ============================================================
+
+resource "aws_apigatewayv2_api" "save_directory" {
+  name          = "trek-save-directory-api"
+  protocol_type = "HTTP"
+
+  cors_configuration {
+    allow_origins = ["*"]
+    allow_methods = ["POST", "OPTIONS"]
+    allow_headers = ["Content-Type"]
+    max_age       = 300
+  }
+
+  tags = var.common_tags
+}
+
+resource "aws_apigatewayv2_integration" "save_directory" {
+  api_id                 = aws_apigatewayv2_api.save_directory.id
+  integration_type       = "AWS_PROXY"
+  integration_uri        = aws_lambda_function.save_directory.invoke_arn
+  payload_format_version = "2.0"
+}
+
+resource "aws_apigatewayv2_route" "save_directory" {
+  api_id    = aws_apigatewayv2_api.save_directory.id
+  route_key = "POST /save"
+  target    = "integrations/${aws_apigatewayv2_integration.save_directory.id}"
+}
+
+resource "aws_apigatewayv2_stage" "default" {
+  api_id      = aws_apigatewayv2_api.save_directory.id
+  name        = "$default"
+  auto_deploy = true
+  tags        = var.common_tags
+}
+
+resource "aws_lambda_permission" "apigw_invoke_save_directory" {
+  statement_id  = "AllowAPIGatewayInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.save_directory.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_apigatewayv2_api.save_directory.execution_arn}/*/*"
 }

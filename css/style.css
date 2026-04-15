@@ -181,6 +181,12 @@ a {
   margin-right: auto; /* pushes toggle + links to the right */
 }
 
+.nav-logo {
+  height: 53px;
+  width: auto;
+  display: block;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -355,6 +361,14 @@ a {
   max-width: 760px;
 }
 
+
+.hero-logo {
+  height: clamp(144px, 29vw, 288px);
+  width: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.5));
+}
 
 .hero-eyebrow {
   font-family: var(--font-body);

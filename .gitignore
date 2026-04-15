@@ -22,3 +22,5 @@ crash.*.log
 *secret.tfvars
 *secrets.tfvars
 
+.idea
+

@@ -17,3 +17,8 @@ output "s3_bucket_arn" {
   description = "S3 bucket ARN"
   value       = aws_s3_bucket.website.arn
 }
+
+output "api_gateway_url" {
+  description = "POST endpoint for admin directory saves — paste this as SAVE_API_URL in js/directory.js"
+  value       = "${trimsuffix(aws_apigatewayv2_stage.default.invoke_url, "/")}/save"
+}

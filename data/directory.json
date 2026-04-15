@@ -6,6 +6,11 @@
       "body": "This is where trek leaders will post important announcements. Check back regularly for updates about activities, packing lists, and other trek details."
     }
   ],
+  "admins": [
+    "robbibundok@gmail.com",
+    "hepstodd@yahoo.com",
+    "ryanhepworth86@gmail.com"
+  ],
   "leaders": [
     "robbibundok@gmail.com",
     "erhanson92@gmail.com",
@@ -60,7 +65,7 @@
       "name": "Family 3",
       "accessEmails": [
         "eric.bucker4@gmail.com",
-        "otherfamily@gmail.com"
+        "buckerfamily@gmail.com"
       ],
       "members": [
         {"ward":"Sunrise Meadows 1st Ward","name":"Eric Bucker","phone":"801-243-3167","family":3,"gender":"Adult","age":"","role":"Pa"},

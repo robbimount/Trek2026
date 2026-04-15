@@ -12,6 +12,7 @@ const translations = {
     'nav-about':         'About',
     'nav-info':          'Trek Info',
     'nav-schedule':      'Schedule',
+    'nav-preparation':   'Preparation',
     'nav-directory':     'Directory',
     'nav-register':      'Late Registration',
     'lang-toggle':       'Español',
@@ -56,6 +57,15 @@ const translations = {
     'event-4-name':      'Squaredancing Activity',
     'event-5-date':      'Jul 13\u201316, 2026',
     'event-5-name':      'Pioneer Trek',
+    // Preparation
+    'prep-heading':       'Get Prepared',
+    'prep-intro':         'Download the resources below to help you prepare for an amazing trek experience.',
+    'prep-packing-title': 'Packing List',
+    'prep-packing-desc':  "Everything you need to bring for a safe and comfortable trek. Don't leave home without it!",
+    'prep-packing-btn':   'View Packing List',
+    'prep-clothing-title':'Clothing Ideas',
+    'prep-clothing-desc': 'Pioneer-style clothing patterns and ideas to help you dress authentically for the trek experience.',
+    'prep-clothing-btn':  'View Clothing Guide',
     // Food
     'nav-food':           'Food',
     'food-heading':       'Food & Dietary Needs',
@@ -68,6 +78,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Upcoming Activities',
+    'activities-details': 'Wednesday, Apr 15 \u2022 7:00 PM \u2022 Youth & Leaders (parents also welcome) \u2022 Casual Dress',
     'activities-img-alt': 'Pioneer Trek activity',
     // Video
     'video-heading':     'Highlights from our Trek in 2022',
@@ -94,6 +105,7 @@ const translations = {
     'nav-about':         'Acerca de',
     'nav-info':          'Info del Trek',
     'nav-schedule':      'Calendario',
+    'nav-preparation':   'Preparaci\u00f3n',
     'nav-directory':     'Directorio',
     'nav-register':      'Registro tard\u00edo',
     'lang-toggle':       'English',
@@ -138,6 +150,15 @@ const translations = {
     'event-4-name':      'Actividad de Baile Cuadrado',
     'event-5-date':      '13 al 16 de julio de 2026',
     'event-5-name':      'Trek Pionero',
+    // Preparation
+    'prep-heading':       'Prep\u00e1rate',
+    'prep-intro':         'Descarga los recursos a continuaci\u00f3n para ayudarte a prepararte para una incre\u00edble experiencia de trek.',
+    'prep-packing-title': 'Lista de Equipaje',
+    'prep-packing-desc':  '\u00a1Todo lo que necesitas traer para un trek seguro y c\u00f3modo. No salgas de casa sin revisarla!',
+    'prep-packing-btn':   'Ver Lista de Equipaje',
+    'prep-clothing-title':'Ideas de Vestimenta',
+    'prep-clothing-desc': 'Patrones e ideas de ropa al estilo pionero para ayudarte a vestirte aut\u00e9nticamente para el trek.',
+    'prep-clothing-btn':  'Ver Gu\u00eda de Vestimenta',
     // Food
     'nav-food':           'Comida',
     'food-heading':       'Comida y Necesidades Diet\u00e9ticas',
@@ -150,6 +171,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Pr\u00f3ximas Actividades',
+    'activities-details': 'Mi\u00e9rcoles, 15 de abr \u2022 7:00 PM \u2022 J\u00f3venes y L\u00edderes (padres tambi\u00e9n bienvenidos) \u2022 Ropa informal',
     'activities-img-alt': 'Actividad del Trek Pionero',
     // Video
     'video-heading':     'Momentos destacados de nuestro Trek 2022',

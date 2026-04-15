@@ -250,6 +250,22 @@ resource "aws_s3_object" "js_directory" {
   etag         = filemd5("${path.module}/../js/directory.js")
 }
 
+resource "aws_s3_object" "data_packing_list" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "data/Packing_List_2026.pdf"
+  source       = "${path.module}/../data/Packing_List_2026.pdf"
+  content_type = "application/pdf"
+  etag         = filemd5("${path.module}/../data/Packing_List_2026.pdf")
+}
+
+resource "aws_s3_object" "data_clothing_patterns" {
+  bucket       = aws_s3_bucket.website.id
+  key          = "data/trek_clothing_patterns.pdf"
+  source       = "${path.module}/../data/trek_clothing_patterns.pdf"
+  content_type = "application/pdf"
+  etag         = filemd5("${path.module}/../data/trek_clothing_patterns.pdf")
+}
+
 # NOTE: data/directory.json is intentionally NOT managed by Terraform.
 # It is initially uploaded manually and thereafter updated exclusively by
 # the admin Lambda (trek-save-directory). Managing it here would cause

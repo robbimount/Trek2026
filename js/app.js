@@ -53,7 +53,7 @@ const translations = {
     'event-2-name':      'Bucket and Flag Activity',
     'event-3-date':      'Jun 3, 2026',
     'event-3-name':      'Trek Family Activity',
-    'event-4-date':      'Jun 10, 2026',
+    'event-4-date':      'Jul 8, 2026',
     'event-4-name':      'Squaredancing Activity',
     'event-5-date':      'Jul 13\u201316, 2026',
     'event-5-name':      'Pioneer Trek',
@@ -78,7 +78,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Upcoming Activities',
-    'activities-details': 'Learn to Square Dance \u2022 Wednesday, June 10 \u2022 7:00 PM \u2022 Sunrise Meadows Building',
+    'activities-details': 'Learn to Square Dance \u2022 Wednesday, July 8 \u2022 7:00 PM \u2022 Sunrise Meadows Building',
     'activities-img-alt': 'Pioneer Trek activity',
     // Video
     'video-heading':     'Highlights from our Trek in 2022',
@@ -146,7 +146,7 @@ const translations = {
     'event-2-name':      'Actividad de Cubeta y Bandera',
     'event-3-date':      '3 de junio de 2026',
     'event-3-name':      'Actividad de Familia de Trek',
-    'event-4-date':      '10 de junio de 2026',
+    'event-4-date':      '8 de julio de 2026',
     'event-4-name':      'Actividad de Baile Cuadrado',
     'event-5-date':      '13 al 16 de julio de 2026',
     'event-5-name':      'Trek Pionero',
@@ -171,7 +171,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Pr\u00f3ximas Actividades',
-    'activities-details': 'Aprende a Bailar Square Dance \u2022 Mi\u00e9rcoles, 10 de junio \u2022 7:00 PM \u2022 Edificio Sunrise Meadows',
+    'activities-details': 'Aprende a Bailar Square Dance \u2022 Mi\u00e9rcoles, 8 de julio \u2022 7:00 PM \u2022 Edificio Sunrise Meadows',
     'activities-img-alt': 'Actividad del Trek Pionero',
     // Video
     'video-heading':     'Momentos destacados de nuestro Trek 2022',

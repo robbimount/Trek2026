@@ -45,6 +45,35 @@ resource "aws_cloudfront_origin_access_control" "website" {
 }
 
 # ============================================================
+# CloudFront Response Headers Policy — cache busting
+# ============================================================
+
+resource "aws_cloudfront_response_headers_policy" "no_cache" {
+  name    = "No-Cache"
+  comment = "Forces browsers and CloudFront to never cache responses"
+
+  custom_headers_config {
+    items {
+      header   = "Cache-Control"
+      value    = "no-store, no-cache, must-revalidate, max-age=0"
+      override = true
+    }
+    items {
+      header   = "Pragma"
+      value    = "no-cache"
+      override = true
+    }
+    items {
+      header   = "Expires"
+      value    = "0"
+      override = true
+    }
+  }
+
+  security_headers_config {}
+}
+
+# ============================================================
 # CloudFront Distribution
 # ============================================================
 
@@ -64,11 +93,12 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   default_cache_behavior {
-    allowed_methods        = ["GET", "HEAD"]
-    cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = "S3-${aws_s3_bucket.website.id}"
-    viewer_protocol_policy = "redirect-to-https"
-    compress               = true
+    allowed_methods            = ["GET", "HEAD"]
+    cached_methods             = ["GET", "HEAD"]
+    target_origin_id           = "S3-${aws_s3_bucket.website.id}"
+    viewer_protocol_policy     = "redirect-to-https"
+    compress                   = true
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.no_cache.id
 
     forwarded_values {
       query_string = false
@@ -78,8 +108,8 @@ resource "aws_cloudfront_distribution" "website" {
     }
 
     min_ttl     = 0
-    default_ttl = 3600
-    max_ttl     = 86400
+    default_ttl = 0
+    max_ttl     = 0
   }
 
   # S3 returns 403 (not 404) for missing objects when public access is blocked
@@ -210,12 +240,12 @@ resource "aws_s3_object" "icon_png" {
   etag         = filemd5("${path.module}/../icon.png")
 }
 
-resource "aws_s3_object" "img_activity_jpg" {
+resource "aws_s3_object" "img_activity_png" {
   bucket       = aws_s3_bucket.website.id
-  key          = "img/activity.jpg"
-  source       = "${path.module}/../img/activity.jpg"
-  content_type = "image/jpeg"
-  etag         = filemd5("${path.module}/../img/activity.jpg")
+  key          = "img/activity2.png"
+  source       = "${path.module}/../img/activity2.png"
+  content_type = "image/png"
+  etag         = filemd5("${path.module}/../img/activity2.png")
 }
 
 resource "aws_s3_object" "img_treklogo2_png" {

@@ -78,7 +78,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Upcoming Activities',
-    'activities-details': 'Wednesday, Apr 15 \u2022 7:00 PM \u2022 Youth & Leaders (parents also welcome) \u2022 Casual Dress',
+    'activities-details': 'Learn to Square Dance \u2022 Wednesday, June 10 \u2022 7:00 PM \u2022 Sunrise Meadows Building',
     'activities-img-alt': 'Pioneer Trek activity',
     // Video
     'video-heading':     'Highlights from our Trek in 2022',
@@ -171,7 +171,7 @@ const translations = {
     // Register
     // Upcoming Activities
     'activities-heading': 'Pr\u00f3ximas Actividades',
-    'activities-details': 'Mi\u00e9rcoles, 15 de abr \u2022 7:00 PM \u2022 J\u00f3venes y L\u00edderes (padres tambi\u00e9n bienvenidos) \u2022 Ropa informal',
+    'activities-details': 'Aprende a Bailar Square Dance \u2022 Mi\u00e9rcoles, 10 de junio \u2022 7:00 PM \u2022 Edificio Sunrise Meadows',
     'activities-img-alt': 'Actividad del Trek Pionero',
     // Video
     'video-heading':     'Momentos destacados de nuestro Trek 2022',

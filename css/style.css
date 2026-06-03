@@ -1193,10 +1193,15 @@ a {
   margin: 2rem auto 0;
   width: 100%;
   max-width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
+}
+
+@media (min-width: 769px) {
+  .activities-image {
+    max-width: 50%;
+  }
 }
 
 /* ==========================================================================

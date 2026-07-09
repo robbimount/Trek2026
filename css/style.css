@@ -1448,7 +1448,7 @@ a {
 }
 
 .equip-schedule {
-  max-width: 720px;
+  max-width: 880px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -1458,7 +1458,7 @@ a {
 
 .equip-row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1.7fr 1fr 1fr;
   align-items: center;
   gap: 1rem;
   padding: 0.95rem 1.5rem;
@@ -1502,6 +1502,12 @@ a {
 
 .equip-time--mp {
   color: var(--color-earth);
+}
+
+.equip-families {
+  color: var(--color-earth);
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 .equip-row--red    { border-left-color: #C0392B; }
